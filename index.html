@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FED BASIC ASSESSMENT</title>
+
+    <link rel="stylesheet" type="text/css "href="style.css">
+    <link rel="stylesheet" type="text/css "href="carousel.css">
+    <link rel="stylesheet" type="text/css "href="modal.css">
+    <link rel="stylesheet" type="text/css "href="buy-modal.css">
+</head>
+
+<body>
+
+<nav>
+    <ul class="main-nav">
+        <li><font color="#0047b3">Sample</font><font color="gray">Site</font></li>
+        <li class="push">
+           <a href="#modal" class="modal-open">
+                <img class="cart" src="img/cart.png" alt="cart">
+           </a>
+        </li>
+    </ul>
+    <hr>
+</nav>
+
+<!-- Carousel Area -->
+
+<div class="slideshow-container">
+    <div class="photoSlide fade">
+        <img src="img/header.PNG" style="width:100%"> 
+    </div>
+
+    <div class="photoSlide fade">
+        <img src="img/header1.PNG" style="width:100%">
+    </div>
+
+    <div class="photoSlide fade">
+        <img src="img/appleLogo.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+
+<!-- Products Area -->
+<div class="box-area">
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 11 Pro</strong></span>
+            <p>Starting at P67,990</p> 
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 11</strong></span>
+            <p>Starting at P47,990</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone XR</strong></span>
+            <p>Starting at P40,990</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone SE</strong></span>
+            <p>Starting at P26,490</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone XS Max</strong></span>
+            <p>Starting at P43,990</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone X</strong></span>
+            <p>Starting at P30,000</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 8 Plus</strong></span>
+            <p>Starting at P25,000</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 8</strong></span>
+            <p>Starting at P20,000</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 7 Plus</strong></span>
+            <p>Starting at 17,000</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+    <div class="single-box">
+        <div class="img-area"></div>
+        <div class="img-text">
+            <span class="header-text"><strong>Iphone 7</strong></span>
+            <p>Starting at 15,000</p>
+            <button id="myBtn" class="buyButton">Order</button>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Modal Content Cart -->
+<div id="modal" class="modal" >
+    <div class="modal__content">
+      <a href="#" class="modal__close">&times;</a>
+      <h2 class="modal__heading">My Cart</h2><hr>
+          
+      <p class="modal_list">Iphone 11 Pro</p>
+      <p class="modal_list">Iphone 11</p>
+      <p class="modal_list">Iphone XR</p>
+      <p class="modal_list">Iphone XR</p>
+      <p class="modal_list">Iphone XR</p>
+
+    </div>
+ </div>
+
+ <!-- Modal Content Buy -->
+
+ <div id="myModal" class="modalx">
+  <div class="modal-contentx">
+    <span class="closex">&times;</span>
+    <p class="px">Do you want to order?</p><hr>
+     <button class="btnCtn">Yes</button>
+     <button class="btnCtn">No</button>
+  </div>
+ </div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("photoSlide");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<!-- Buy Modal Script -->
+<script>
+    var modalx = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closex")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modalx.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modalx.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modalx) {
+        modalx.style.display = "none";
+      }
+    }
+    </script>
+
+
+
+</body>
+</html>
